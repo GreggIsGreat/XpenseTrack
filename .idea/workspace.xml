@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acbee62f-fed1-4dc7-aed8-4fe603a92ba4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xpenseapp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xpenseapp/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xpenseapp/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xpenseapp/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xpenseapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xpenseapp/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xpenseapp/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xpenseapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xpenseapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/fevicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/image/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xpense/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpense/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpense/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpense/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +52,15 @@
     "git-widget-placeholder": "master"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Thabang Teddy\PycharmProjects\XpenseTrack" />
+      <recent name="C:\Users\Thabang Teddy\PycharmProjects\XpenseTrack\xpenseapp\templates\xpenseapp" />
+      <recent name="C:\Users\Thabang Teddy\PycharmProjects\XpenseTrack\xpense" />
+      <recent name="C:\Users\Thabang Teddy\PycharmProjects\XpenseTrack\xpenseapp" />
+      <recent name="C:\Users\Thabang Teddy\PycharmProjects\XpenseTrack\static\img" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
