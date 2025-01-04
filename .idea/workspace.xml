@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acbee62f-fed1-4dc7-aed8-4fe603a92ba4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/xpenseapp/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/currentGoals.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/reports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/tradePortfolio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +56,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.codeium.enabled": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "Updates"
+    "git-widget-placeholder": "Updates",
+    "last_opened_file_path": "C:/Users/Thabang Teddy/PycharmProjects/XpenseTrack/xpenseapp/templates/xpenseapp"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Thabang Teddy\PycharmProjects\XpenseTrack\xpenseapp\templates\xpenseapp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Thabang Teddy\PycharmProjects\XpenseTrack" />
       <recent name="C:\Users\Thabang Teddy\PycharmProjects\XpenseTrack\xpenseapp\templates\xpenseapp" />
