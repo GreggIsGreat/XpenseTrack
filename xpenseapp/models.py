@@ -107,3 +107,8 @@ class Settings(models.Model):
 
     def __str__(self):
         return f"Settings for {self.user.user.username}"
+
+
+
+class Account(models.Model):
+    balance = models.DecimalField(max_digits=10, decimal_places=2)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import UserProfile, Transaction, Budget, Goal, ExpenseDistribution, ExpenseTrend, Order, Settings
+from .models import UserProfile, Transaction, Budget, Goal, ExpenseDistribution, ExpenseTrend, Order, Settings, Account
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
 
@@ -19,6 +19,7 @@ class UserAdmin(BaseUserAdmin):
 # Register User Admin
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
+admin.site.register(Account)
 
 
 # Register other models

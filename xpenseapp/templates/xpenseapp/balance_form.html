@@ -1,0 +1,35 @@
+{%  extends 'xpenseapp/main.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xpense Track</title>
+</head>
+{% block content %}
+<form method="post" class="border p-4">
+    {% csrf_token %}
+    <div class="form-group">
+        <input type="number" class="form-control border-0" id="balance" name="balance" step="0.01" placeholder="P0.00" value="{{ account.balance }}">
+    </div>
+    {{ form.as_p }}
+    <br>
+    <button class="btn btn-primary" type="submit">Save Changes</button>
+    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#balanceModal">Edit</button>
+</form>
+
+<style>
+    .form-group {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    padding: 5px;
+}
+</style>
+{% endblock %}
