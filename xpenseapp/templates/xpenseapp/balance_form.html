@@ -6,7 +6,7 @@
     <title>Xpense Track</title>
 </head>
 {% block content %}
-<form method="post" class="border p-4">
+<form method="post" action="{% url 'update_balance' %}" class="border p-4">
     {% csrf_token %}
     <div class="form-group">
         <input type="number" class="form-control border-0" id="balance" name="balance" step="0.01" placeholder="P0.00" value="{{ account.balance }}">

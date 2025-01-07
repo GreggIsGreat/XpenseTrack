@@ -48,16 +48,14 @@ class Budget(models.Model):
 
 # Goal
 class Goal(models.Model):
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    goal_name = models.CharField(max_length=100)
-    target_date = models.DateField()
+    name = models.CharField(max_length=255)
+    timeline = models.DateField()
     required_savings = models.DecimalField(max_digits=10, decimal_places=2)
-    current_progress = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
-    completed = models.BooleanField(default=False)
-    priority = models.IntegerField(default=1)
+    progress = models.PositiveIntegerField()
+    complete = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.goal_name
+        return self.name
 
 
 # Expense Distribution
@@ -107,7 +105,6 @@ class Settings(models.Model):
 
     def __str__(self):
         return f"Settings for {self.user.user.username}"
-
 
 
 class Account(models.Model):

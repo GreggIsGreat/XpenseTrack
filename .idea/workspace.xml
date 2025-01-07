@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acbee62f-fed1-4dc7-aed8-4fe603a92ba4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/xpenseapp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/balance_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/create_goal.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpenseapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xpenseapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/balance_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/balance_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/tradePortfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/tradePortfolio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xpenseapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xpenseapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/views.py" afterDir="false" />
     </list>
@@ -24,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -92,5 +91,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xpenseapp/forms.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

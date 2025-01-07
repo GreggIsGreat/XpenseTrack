@@ -12,6 +12,7 @@
         <input type="number" class="form-control border-0" id="balance" name="balance" step="0.01" placeholder="P0.00" value="{{ account.balance }}">
     </div>
     {{ form.as_p }}
+    <br>
     <button class="btn btn-primary" type="submit">Save Changes</button>
     <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#balanceModal">Edit</button>
 </form>
