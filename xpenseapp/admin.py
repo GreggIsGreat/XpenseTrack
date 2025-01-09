@@ -37,11 +37,13 @@ class BudgetAdmin(admin.ModelAdmin):
     list_filter = ('month',)
 
 
-@admin.register(Goal)
 class GoalAdmin(admin.ModelAdmin):
-    list_display = ('user', 'goal_name', 'target_date', 'required_savings', 'current_progress', 'completed')
-    search_fields = ('user__user__username', 'goal_name')
+    list_display = ('user', 'goal_name', 'target_date', 'required_savings', 'current_progress', 'completed', 'priority')
     list_filter = ('completed', 'priority', 'target_date')
+    search_fields = ('user__username', 'goal_name')
+
+
+admin.site.register(Goal, GoalAdmin)
 
 
 @admin.register(ExpenseDistribution)

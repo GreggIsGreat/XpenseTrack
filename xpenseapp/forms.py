@@ -24,4 +24,5 @@ class GoalForm(forms.ModelForm):
                 attrs={'class': 'form-control', 'placeholder': 'Enter Required Savings'}),
             'progress': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Enter Progress Percentage'}),
             'complete': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+            'priority': forms.Select(attrs={'class': 'form-control'}),
         }

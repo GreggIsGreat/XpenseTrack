@@ -53,6 +53,7 @@ class Goal(models.Model):
     required_savings = models.DecimalField(max_digits=10, decimal_places=2)
     progress = models.PositiveIntegerField()
     complete = models.BooleanField(default=False)
+    priority = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
