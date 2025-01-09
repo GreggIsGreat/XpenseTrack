@@ -16,12 +16,11 @@ class BalanceForm(forms.ModelForm):
 class GoalForm(forms.ModelForm):
     class Meta:
         model = Goal
-        fields = ['name', 'timeline', 'required_savings', 'progress', 'complete']
+        fields = ['name', 'timeline', 'required_savings', 'progress', 'complete', 'priority']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter Goal Name'}),
             'timeline': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
-            'required_savings': forms.NumberInput(
-                attrs={'class': 'form-control', 'placeholder': 'Enter Required Savings'}),
+            'required_savings': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Enter Required Savings'}),
             'progress': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Enter Progress Percentage'}),
             'complete': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
             'priority': forms.Select(attrs={'class': 'form-control'}),

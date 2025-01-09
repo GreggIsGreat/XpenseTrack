@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="acbee62f-fed1-4dc7-aed8-4fe603a92ba4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/migrations/0002_account.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,17 +88,18 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/xpenseapp/forms.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

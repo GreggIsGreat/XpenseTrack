@@ -38,9 +38,9 @@ class BudgetAdmin(admin.ModelAdmin):
 
 
 class GoalAdmin(admin.ModelAdmin):
-    list_display = ('user', 'goal_name', 'target_date', 'required_savings', 'current_progress', 'completed', 'priority')
-    list_filter = ('completed', 'priority', 'target_date')
-    search_fields = ('user__username', 'goal_name')
+    list_display = ('name', 'timeline', 'required_savings', 'progress', 'complete', 'priority')
+    list_filter = ('complete', 'priority', 'timeline')  # Adjusted fields
+    search_fields = ('name',)
 
 
 admin.site.register(Goal, GoalAdmin)
