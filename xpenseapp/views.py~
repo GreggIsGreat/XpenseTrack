@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import BalanceForm, GoalForm
-from .models import Account, Goal
+from .models import Account
 
 
 # Create your views here.
@@ -53,5 +53,4 @@ def create_goal(request):
 
 
 def goals_table(request):
-    goals = Goal.objects.all()
-    return render(request, 'xpenseapp/goals_table.html', {'goals': goals})
+    return render(request, 'xpenseapp/goals_table.html')
