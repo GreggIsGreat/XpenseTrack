@@ -11,26 +11,7 @@
         <h2 class="mb-4">Create a New Goal</h2>
         <form method="POST" class="card p-4 shadow-lg">
             {% csrf_token %}
-            <div class="mb-3">
-                <label for="name" class="form-label">Goal Name</label>
-                {{ form.name }}
-            </div>
-            <div class="mb-3">
-                <label for="timeline" class="form-label">Timeline</label>
-                {{ form.timeline }}
-            </div>
-            <div class="mb-3">
-                <label for="required_savings" class="form-label">Required Savings</label>
-                {{ form.required_savings }}
-            </div>
-            <div class="mb-3">
-                <label for="progress" class="form-label">Progress</label>
-                {{ form.progress }}
-            </div>
-            <div class="form-check mb-3">
-                {{ form.complete }}
-                <label class="form-check-label" for="complete">Complete</label>
-            </div>
+            {{ form.as_p }}
             <button type="submit" class="btn btn-primary">Save Goal</button>
             <a href="{% url 'goals_table' %}" class="btn btn-secondary">Back to Goals</a>
         </form>

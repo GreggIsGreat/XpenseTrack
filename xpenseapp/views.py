@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from .forms import BalanceForm, GoalForm
 from .models import Account, Goal
@@ -40,17 +41,31 @@ def update_balance(request):
     return render(request, 'xpenseapp/balance_form.html', {'form': form, 'account': account})
 
 
+# def create_goal(request):
+#     if request.method == 'POST':
+#         form = GoalForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('index')  # Redirect to goals table after submission
+#     else:
+#         form = GoalForm()
+#
+#     return render(request, 'xpenseapp/create_goal.html', {'form': form})
+
+
 def create_goal(request):
     if request.method == 'POST':
         form = GoalForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('index')  # Redirect to goals table after submission
+            goal = form.save(commit=False)
+            goal.user = request.user  # Ensure user is associated
+            goal.save()
+            messages.success(request, 'Goal created successfully!')
+            return redirect('index')
     else:
         form = GoalForm()
 
     return render(request, 'xpenseapp/create_goal.html', {'form': form})
-
 
 def goals_table(request):
     goals = Goal.objects.all()
