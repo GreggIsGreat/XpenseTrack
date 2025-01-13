@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .models import UserProfile, Transaction, Budget, Goal, ExpenseDistribution, ExpenseTrend, Order, Settings, Account
+from .models import User1, Transaction, Budget, Goal, ExpenseDistribution, ExpenseTrend, Order, Settings, Account
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
 
 
 # Inline UserProfile for User Admin
 class UserProfileInline(admin.StackedInline):
-    model = UserProfile
+    model = User1
     can_delete = False
     verbose_name_plural = 'User Profile'
 

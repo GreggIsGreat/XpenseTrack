@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 # User Profile
-class UserProfile(models.Model):
+class User1(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     current_balance = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     current_savings = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
@@ -21,7 +21,7 @@ class Transaction(models.Model):
         ('Income', 'Income'),
         ('Expense', 'Expense')
     )
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     transaction_type = models.CharField(max_length=10, choices=TRANSACTION_TYPES)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     category = models.CharField(max_length=50)
@@ -35,7 +35,7 @@ class Transaction(models.Model):
 
 # Budget
 class Budget(models.Model):
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.CharField(max_length=50)
     allocated_amount = models.DecimalField(max_digits=10, decimal_places=2)
     spent_amount = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
@@ -62,7 +62,7 @@ class Goal(models.Model):
 
 # Expense Distribution
 class ExpenseDistribution(models.Model):
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.CharField(max_length=50)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     month = models.DateField()
@@ -73,7 +73,7 @@ class ExpenseDistribution(models.Model):
 
 # Expense Trend
 class ExpenseTrend(models.Model):
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     month = models.DateField()
     total_expenses = models.DecimalField(max_digits=10, decimal_places=2)
     change_percentage = models.FloatField()
@@ -84,7 +84,7 @@ class ExpenseTrend(models.Model):
 
 # Order
 class Order(models.Model):
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     order_name = models.CharField(max_length=100)
     order_date = models.DateField()
     status = models.CharField(max_length=20, default='Pending')
@@ -100,7 +100,7 @@ class Settings(models.Model):
         ('Light', 'Light'),
         ('Dark', 'Dark')
     )
-    user = models.OneToOneField(UserProfile, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     theme = models.CharField(max_length=10, choices=THEME_CHOICES, default='Light')
     notifications_enabled = models.BooleanField(default=True)
     currency = models.CharField(max_length=5, default='USD')
