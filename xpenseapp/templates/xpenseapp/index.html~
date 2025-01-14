@@ -360,7 +360,7 @@
                         <td class="align-middle text-center text-sm">
                           <span class="text-xs font-weight-bold">P{{ goal.required_savings }}</span>
                         </td>
-                        <td class="align-middle">
+                        <td class="align-middle text-center">
                           <div class="progress-wrapper w-75 mx-auto">
                             <div class="progress-info">
                               <div class="progress-percentage">
@@ -375,7 +375,7 @@
                         <td class="align-middle text-center form-check">
                           <input type="checkbox" class="form-check-input" id="goal_{{ goal.id }}" name="goal_{{ goal.id }}" {% if goal.complete %}checked{% endif %}>
                         </td>
-                        <td class="align-middle text-center">
+                        <td class="align-middle text-center form-check">
                          <div class="d-inline-flex">
                           <a href="#" class="btn btn-icon btn-xs btn-ms" title="Edit">
                             <i class="material-symbols-rounded opacity-10">edit</i>
@@ -797,7 +797,7 @@
         background-color: #f7f7f7;
         color: #333;
     }
-    </style>
+   </style>
 </body>
 {% endblock %}
 </html>
