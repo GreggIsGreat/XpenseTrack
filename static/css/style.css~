@@ -3094,7 +3094,7 @@ textarea.form-control-lg {
   display: block;
   min-height: auto;
   padding-left: 1.73em;
-  margin-bottom: 6.125rem;
+  margin-bottom: 0.125rem;
 }
 
 .form-check .form-check-input {
@@ -26977,6 +26977,7 @@ hr.horizontal.gray-light {
 
 .table td .progress .progress-bar {
   height: 5px;
+  
 }
 
 .table td,

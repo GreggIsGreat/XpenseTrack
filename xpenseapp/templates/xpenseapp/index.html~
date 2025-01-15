@@ -375,7 +375,7 @@
                         <td class="align-middle text-center form-check">
                           <input type="checkbox" class="form-check-input" id="goal_{{ goal.id }}" name="goal_{{ goal.id }}" {% if goal.complete %}checked{% endif %}>
                         </td>
-                        <td class="align-middle text-center form-check">
+                        <td class="align-middle text-center">
                          <div class="d-inline-flex">
                           <a href="#" class="btn btn-icon btn-xs btn-ms" title="Edit">
                             <i class="material-symbols-rounded opacity-10">edit</i>
