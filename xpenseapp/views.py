@@ -73,3 +73,21 @@ def goals_table(request):
     account = get_object_or_404(Account, id=1)
     goals = Goal.objects.filter(user=request.user)
     return render(request, 'xpenseapp/goals_table.html', {'goals': goals, "account": account})
+
+
+def delete_goal(request, pk):
+    goal = Goal.objects.get(pk=pk)
+    goal.delete()
+    return redirect('index')
+
+
+def edit_goal(request, pk):
+    goal = Goal.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = GoalForm(request.POST, instance=goal)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = GoalForm(instance=goal)
+    return render(request, 'xpenseapp/create_goal.html', {'form': form})

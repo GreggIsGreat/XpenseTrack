@@ -471,7 +471,7 @@ th {
 }
 
 table tbody tr {
-  height: 30px; /* adjust this value to your desired height */
+  height: 1000px; /* adjust this value to your desired height */
 }
 thead,
 tbody,
@@ -26977,7 +26977,7 @@ hr.horizontal.gray-light {
 
 .table td .progress .progress-bar {
   height: 5px;
-  
+
 }
 
 .table td,
