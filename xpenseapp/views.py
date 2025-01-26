@@ -82,12 +82,22 @@ def delete_goal(request, pk):
 
 
 def edit_goal(request, pk):
-    goal = Goal.objects.get(pk=pk)
-    if request.method == 'POST':
-        form = GoalForm(request.POST, instance=goal)
-        if form.is_valid():
-            form.save()
-            return redirect('index')
-    else:
-        form = GoalForm(instance=goal)
-    return render(request, 'xpenseapp/create_goal.html', {'form': form})
+    try:
+        goal = get_object_or_404(Goal, pk=pk)
+        if request.method == 'POST':
+            form = GoalForm(request.POST, instance=goal)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Goal updated successfully!')
+                return redirect('index')
+        else:
+            form = GoalForm(instance=goal)
+
+        return render(request, 'xpenseapp/create_goal.html', {
+            'form': form,
+            'edit_mode': True,
+            'goal': goal
+        })
+    except Goal.DoesNotExist:
+        messages.error(request, 'Goal not found!')
+        return redirect('index')
