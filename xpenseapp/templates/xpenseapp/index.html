@@ -334,65 +334,67 @@
             <div class="card-body px-0 pb-2">
               <div class="table-responsive">
                 <table class="table align-items-center mb-0">
-                    <thead>
-                      <tr>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Goal</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Timeline</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Required Savings</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Progress</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Complete</th>
-                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Actions</th> <!-- New column for actions -->
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {% for goal in goals %}
-                      <tr class="align-items-start">
-                        <td>
-                            <div class="d-flex flex-column justify-content-center">
-                              <h6 class="mb-0 text-sm">{{ goal.name }}</h6>
-                            </div>
-                        </td>
-                        <td>
-                          <span class="text-xs font-weight-bold">{{ goal.timeline|date:"F Y" }}</span>
-                        </td>
-                        <td class="align-middle text-center text-sm">
-                          <span class="text-xs font-weight-bold">P{{ goal.required_savings }}</span>
-                        </td>
-                        <td class="align-middle text-center">
-                          <div class="progress-wrapper w-75 mx-auto">
-                            <div class="progress-info">
-                              <div class="progress-percentage">
-                                <span class="text-xs font-weight-bold">{{ goal.progress }}%</span>
-                              </div>
-                            </div>
-                            <div class="progress">
-                              <div class="progress-bar bg-gradient-info w-{{ goal.progress }}" role="progressbar" aria-valuenow="{{ goal.progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Goal</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Timeline</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Required Savings</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Progress</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Complete</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for goal in goals %}
+                    <tr class="align-middle"> <!-- Changed alignment to middle for the whole row -->
+                      <td>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="mb-0 text-sm">{{ goal.name }}</h6>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">{{ goal.timeline|date:"F Y" }}</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-xs font-weight-bold">P{{ goal.required_savings }}</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold">{{ goal.progress }}%</span>
                             </div>
                           </div>
-                        </td>
-                        <td class="align-middle text-center form-check">
-                          <input type="checkbox" class="form-check-input" id="goal_{{ goal.id }}" name="goal_{{ goal.id }}" {% if goal.complete %}checked{% endif %}>
-                        </td>
-                        <td class="align-middle text-center">
-                         <div class="d-inline-flex">
-                            <form action="{% url 'edit_goal' goal.id %}" method="get" style="display:inline;">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-icon btn-xs btn-ms" title="Edit">
-                                    <i class="material-symbols-rounded opacity-10">edit</i>
-                                </button>
-                            </form>
-                          <form action="{% url 'delete_goal' goal.id %}" method="post">
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info w-{{ goal.progress }}" role="progressbar"
+                                 aria-valuenow="{{ goal.progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle text-center">
+                        <input type="checkbox" class="form-check-input" id="goal_{{ goal.id }}"
+                               name="goal_{{ goal.id }}" {% if goal.complete %}checked{% endif %}>
+                      </td>
+                      <td class="align-middle text-center p-1"> <!-- Added padding control -->
+                        <div class="d-flex justify-content-center gap-1"> <!-- Added gap between buttons -->
+                          <form action="{% url 'edit_goal' goal.id %}" method="get" class="d-inline">
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-icon bg-gradient-dark shadow-dark btn-xs btn-ms" title="Delete">
-                              <i class="material-symbols-rounded opacity-10">delete</i>
+                            <button type="submit" class="btn btn-icon btn-xs p-1" title="Edit">
+                              <i class="material-symbols-rounded opacity-10" style="font-size: 1rem;">edit</i>
+                            </button>
+                          </form>
+                          <form action="{% url 'delete_goal' goal.id %}" method="post" class="d-inline">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-icon btn-xs p-1" title="Delete">
+                              <i class="material-symbols-rounded opacity-10" style="font-size: 1rem;">delete</i>
                             </button>
                           </form>
                         </div>
-                        </td>
-                      </tr>
-                      {% endfor %}
-                    </tbody>
-                  </table>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
 
               </div>
             </div>
