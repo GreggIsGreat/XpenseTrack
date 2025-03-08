@@ -127,3 +127,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Add these lines at the end of your settings.py
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'index'

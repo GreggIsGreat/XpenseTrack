@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acbee62f-fed1-4dc7-aed8-4fe603a92ba4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpenseapp/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpense/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpense/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/templates/xpenseapp/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpenseapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpenseapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -22,6 +22,12 @@
 
 
 {% endblock %}
+<!-- Add this in your navigation bar -->
+{% if user.is_authenticated %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+    </li>
+{% endif %}
 </body>
 
 <script>

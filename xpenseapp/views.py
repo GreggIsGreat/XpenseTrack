@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from .forms import BalanceForm, GoalForm
 from .models import Account, Goal
+from django.contrib.auth.forms import UserCreationForm
 
 
 # Create your views here.
@@ -101,3 +102,17 @@ def edit_goal(request, pk):
     except Goal.DoesNotExist:
         messages.error(request, 'Goal not found!')
         return redirect('index')
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            # Create an Account for the new user
+            Account.objects.create(user=user, balance=0)
+            messages.success(request, 'Account created successfully! You can now login.')
+            return redirect('login')
+    else:
+        form = UserCreationForm()
+    return render(request, 'xpenseapp/register.html', {'form': form})
